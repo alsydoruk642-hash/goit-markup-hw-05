@@ -445,48 +445,85 @@
         </button>
         <p class="modal-title">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-          <label class="modal-label" for="modal-name" name="name"
-            >Name
-            <input
-              class="modal-input"
-              type="text"
-              id="modal-name"
-              name="name"
-              required
-            />
-          </label>
-          <label class="modal-label" for="modal-phone" name="phone"
-            >Phone
-            <input
-              class="modal-input"
-              type="tel"
-              id="modal-phone"
-              name="phone"
-              required
-            />
-          </label>
-          <label class="modal-label" for="modal-email" name="email"
-            >Email
-            <input
-              class="modal-input"
-              type="email"
-              id="modal-email"
-              name="email"
-              required
-            />
-          </label>
-          <label class="modal-label" for="modal-comment" name="comment"
-            >Comment
-            <textarea
-              name="comment"
-              id="modal-comment"
-              class="modal-input"
-              type="text"
-              id="modal-comment"
-              name="comment"
-              placeholder="Text input"
-            ></textarea>
-          </label>
+          <div class="modal-form-container">
+            <label class="modal-label" for="modal-name" name="name"
+              >Name
+              <div class="modal-input-container">
+                <input
+                  class="modal-input"
+                  type="text"
+                  id="modal-name"
+                  name="name"
+                  required
+                />
+                <svg
+                  class="modal-input-icon"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-form-container">
+            <label class="modal-label" for="modal-phone" name="phone"
+              >Phone
+              <div class="modal-input-container">
+                <input
+                  class="modal-input"
+                  type="tel"
+                  id="modal-phone"
+                  name="phone"
+                  required
+                /><svg
+                  class="modal-input-icon"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-form-container">
+            <label class="modal-label" for="modal-email" name="email"
+              >Email
+              <div class="modal-input-container">
+                <input
+                  class="modal-input"
+                  type="email"
+                  id="modal-email"
+                  name="email"
+                  required
+                />
+                <svg
+                  class="modal-input-icon"
+                  width="12"
+                  height="12"
+                  aria-hidden="true"
+                >
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-form-container comment-container">
+            <label class="modal-label" for="modal-comment" name="comment"
+              >Comment
+              <textarea
+                name="comment"
+                id="modal-comment"
+                class="modal-input"
+                type="text"
+                id="modal-comment"
+                name="comment"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
         </form>
       </div>
     </div>
