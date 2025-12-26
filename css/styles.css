@@ -544,11 +544,18 @@ body {
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background: var(--iris);
   color: var(--white);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  border: none;
+  cursor: pointer;
+}
+.footer-sub-button-icon {
+  fill: #f4f4fd;
+  display: block;
 }
 .footer-sub-input:hover,
 .footer-sub-input:focus,
