@@ -651,11 +651,6 @@ body {
 textarea.modal-input {
   resize: none;
 }
-.modal-form-container.comment-container {
-  width: 360px;
-  height: 120px;
-}
-
 .modal-input-container {
   position: relative;
 }
