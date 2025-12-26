@@ -580,8 +580,8 @@ body {
   z-index: 1000;
 
   /* сховати оврлей та актиність миші*/
-  opacity: 0; /*0 - прихований, 1 - видимий*/
-  pointer-events: none; /* none - неактивний, auto - активний*/
+  opacity: 1; /*0 - прихований, 1 - видимий*/
+  pointer-events: auto; /* none - неактивний, auto - активний*/
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*.modal-overlay.is-open {
@@ -591,11 +591,83 @@ body {
 .modal {
   background-color: #ffffff;
   max-width: 408px;
-  max-height: 584px;
+  height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: var(--dairy);
   border-radius: 4px;
   overflow-y: auto;
   position: relative;
+  padding: 72px 24px;
+}
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: #e7e9fc;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: var(--iris);
+  border-color: var(--iris);
+}
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: white;
+}
+.modal-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--navy-blue);
+}
+.modal-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  max-width: 360px;
+}
+textarea.modal-input {
+  resize: none;
+}
+
+.modal-label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--light-slate);
+  display: flex;
+  flex-direction: column;
+}
+.modal-input {
+  border: 1px solid var(--navy-blue-modal);
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+#modal-comment {
+  width: 360px;
+  height: 120px;
 }
