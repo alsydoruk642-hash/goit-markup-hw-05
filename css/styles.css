@@ -580,26 +580,27 @@ body {
   z-index: 1000;
 
   /* сховати оврлей та актиність миші*/
-  opacity: 1; /*0 - прихований, 1 - видимий*/
-  pointer-events: auto; /* none - неактивний, auto - активний*/
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0; /*0 - прихований, 1 - видимий*/
+  pointer-events: none; /* none - неактивний, auto - активний*/
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
 }
-/*.modal-overlay.is-open {
-  opacity: 1;                     
+.modal-overlay.is-open {
+  opacity: 1;
   pointer-events: auto;
-}*/ /* зробити оврлей видимим */
+  visibility: visible;
+} /* зробити оврлей видимим */
 .modal {
   background-color: #ffffff;
-  max-width: 408px;
+  width: 408px;
   height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
-  background: var(--dairy);
   border-radius: 4px;
-  overflow-y: auto;
   position: relative;
-  padding: 0 24px;
-  padding-top: 72px;
+  padding: 72px 24px 24px;
+  overflow: auto;
 }
 .modal-close-button {
   position: absolute;
@@ -712,6 +713,8 @@ textarea.modal-input {
   flex-direction: row;
   gap: 8px;
   border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 .modal-accept-label {
   font-family: "Roboto", sans-serif;
@@ -721,7 +724,9 @@ textarea.modal-input {
   letter-spacing: 0.04em;
   color: var(--slate);
   margin-bottom: 24px;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
 }
 .modal-span-container {
   border-radius: 2px;
@@ -730,6 +735,10 @@ textarea.modal-input {
   height: 16px;
   margin-right: 8px;
   background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal-accept-icon {
   fill: white;
@@ -745,8 +754,6 @@ textarea.modal-input {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  /* line-height: 16px; */
-  line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: var(--iris);
@@ -756,7 +763,7 @@ textarea.modal-input {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+
   border-radius: 4px;
   padding: 16px 32px;
   width: 169px;
@@ -765,14 +772,11 @@ textarea.modal-input {
   background: var(--iris);
   font-weight: 500;
   font-size: 16px;
-
-  /* line-height: 24px; */
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
   color: var(--white);
   margin: 0 auto;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
