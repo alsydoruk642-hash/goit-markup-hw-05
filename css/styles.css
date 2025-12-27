@@ -692,3 +692,7 @@ textarea.modal-input {
   height: 40px;
   padding-left: 38px;
 }
+.modal-accept-icon {
+  position: absolute;
+  background-color: #404bbf;
+}
