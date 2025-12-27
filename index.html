@@ -524,25 +524,29 @@
           </div>
           <div class="modal-accept-container">
             <input
-              class="modal-accept-checkbox"
+              class="modal-accept-checkbox visually-hidden"
               type="checkbox"
               id="modal-accept"
-              name="accept"
+              name="modal-accept"
               required
+              value="true"
             />
             <label class="modal-accept-label" for="modal-accept">
-              <svg
-                class="modal-accept-icon"
-                width="12"
-                height="12"
-                aria-hidden="true"
-              >
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
+              <span class="modal-span-container">
+                <svg
+                  class="modal-accept-icon"
+                  width="10"
+                  height="8"
+                  aria-hidden="true"
+                >
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
-              <a class="privacy-policy" href="">Privacy Policy</a>
+              <a class="privacy-policy-link" href="">Privacy Policy</a>
             </label>
           </div>
+          <button class="modal-send-button" type="submit">Send</button>
         </form>
       </div>
     </div>
