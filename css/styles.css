@@ -597,7 +597,7 @@ body {
   visibility: visible;
 } /* зробити оврлей видимим */
 .modal {
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   width: 408px;
   min-height: 584px;
   box-shadow:
