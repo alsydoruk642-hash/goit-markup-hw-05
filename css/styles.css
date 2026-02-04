@@ -435,7 +435,10 @@ body {
 }
 .footer .container {
   display: flex;
+  flex-direction: row;
   align-items: baseline;
+  gap: 0;
+  padding-left: 15px;
 }
 .footer-logo-text-container {
   margin-right: 120px;
@@ -505,6 +508,7 @@ body {
 }
 .footer-subscribe-container {
   max-width: 453px;
+  margin-left: auto;
 }
 .footer-sub-row {
   display: flex;
