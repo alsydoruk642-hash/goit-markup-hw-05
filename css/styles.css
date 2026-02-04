@@ -670,9 +670,7 @@ textarea.modal-input {
   position: relative;
   width: 100%;
 }
-.modal-form-container.comment {
-  margin-bottom: 16px;
-}
+
 .modal-input-comment {
   border: 1px solid var(--navy-blue-modal);
   border-radius: 4px;
@@ -734,6 +732,9 @@ textarea.modal-input {
 }
 .modal-input-container:focus-within .modal-input-icon {
   fill: var(--iris);
+}
+.comment {
+  margin-bottom: 16px;
 }
 .modal-accept-container {
   display: flex;
